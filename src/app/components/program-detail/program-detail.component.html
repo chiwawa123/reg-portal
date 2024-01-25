@@ -1,128 +1,83 @@
-<div id="banner-area" class="banner-area" style="background-image:url(assets/images/yo.JPG)">
-    <div class="banner-text">
-      <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-                <div class="banner-heading">
-                  <h1 class="banner-title">Programme Details</h1>
-                  <nav aria-label="breadcrumb">
-                      <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a href="">Home</a></li>
-                        <li class="breadcrumb-item"><a routerLink="programDetail">Programme Details</a></li>
-                      
-                      </ol>
-                  </nav>
-                </div>
-            </div><!-- Col end -->
-          </div><!-- Row end -->
-      </div><!-- Container end -->
-    </div><!-- Banner text end -->
-  </div><!-- Banner area end --> 
-  
-  <section id="main-container" class="main-container">
+		<!-- Breadcrumbs -->
+		<div class="breadcrumbs overlay">
+			<div class="container">
+				<div class="bread-inner">
+					<div class="row">
+						<div class="col-12">
+							<h2>Programme Details</h2>
+							<ul class="bread-list">
+								<li><a routerLink="">Home</a></li>
+								<li><i class="icofont-simple-right"></i></li>
+								<li routerLink="admission" class="active">Programme Detail</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+
+
+    
+  <section class="news-single section">
     <div class="container">
-  
       <div class="row">
-        <div class="col-md-6 mt-5 mt-md-0">
-          <h3 class="column-title-small">Programme Details</h3>
+        <div class="col-lg-12 col-12">
+          <div class="row">
+            <div class="col-12">
+              <div class="single-main">
+                <!-- News Head -->
+                <div class="news-head">
 
-          <div class="accordion accordion-group accordion-classic" id="construction-accordion">
-            <div class="card">
-              <div class="card-header p-0 bg-transparent" id="headingOne">
-                <h2 class="mb-0">
-                  <button class="btn btn-block text-left" type="button" data-toggle="collapse"
-                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-               Programme Name
-                  </button>
-                </h2>
-              </div>
-
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                data-parent="#construction-accordion">
-                <div class="card-body" style="text-align: justify;font-size: 17px;">
-               {{itemDetail.title}}
+                  <!-- News Title -->
+              <p class="news-title pl-3" style="color: #24b0ed;">Programme Details</p>
+                
                 </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header p-0 bg-transparent" id="headingTwo">
-                <h2 class="mb-0">
-                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapse0" aria-expanded="false" aria-controls="collapseTwo">
-                   Programme Code
-                  </button>
-                </h2>
-              </div>
-              <div id="collapse0" class="collapse show" aria-labelledby="headingTwo"
-                data-parent="#construction-accordion">
-                <div class="card-body" style="text-align: justify;font-size: 17px;">
-                  {{itemDetail.code}}
-                </div>
-              </div>
-            </div>
-        
-            <div class="card">
-              <div class="card-header p-0 bg-transparent" id="headingTwo">
-                <h2 class="mb-0">
-                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                   Programme Duration
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
-                data-parent="#construction-accordion">
-                <div class="card-body" style="font-size: 17px;">
-                  {{itemDetail.duration}} years
-                </div>
-              </div>
-            </div>
-        
-            <div class="card">
-              <div class="card-header p-0 bg-transparent" id="headingThree">
-                <h2 class="mb-0">
-                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
-                   Commences
-                  </button>
-                </h2>
-              </div>
-              <div id="collapse4" class="collapse show" aria-labelledby="headingThree"
-                data-parent="#construction-accordion">
-                <div class="card-body" style="text-align: justify;font-size: 17px;">
+                
+                <div class="news-text flex-display">
+                  <div class="col-md-8 ">
+                    <h4 class="ts-namer" style="font-size: 16px;color: #323232b1;">About</h4> 
+                    <p class="pt-3" [innerHTML]="itemDetail.about" style="text-align: justify;font-size: 17px;"></p>       
+                    
+                
+                   <br>
+                
                   
-                  {{itemDetail.intake}}
+          
+                  </div><!-- Col end -->
+                  <div class="col-md-4 pt-4">
+            
+       <p class="text-justify" style="font-size: medium;">
+        <span style="color: #24b0ed;">Name:</span> {{itemDetail.title}}
+      </p>          
+      <p class="text-justify" style="font-size: medium;">
+        <span style="color: #24b0ed;">Code:</span> {{itemDetail.code}}
+      </p>            
+      <p class="text-justify" style="font-size: medium;">
+        <span style="color: #24b0ed;">Duration:</span> {{itemDetail.duration}} <span>Years</span>
+      </p>        
+      <p class="text-justify" style="font-size: medium;">
+        <span style="color: #24b0ed;">Commences: </span>{{itemDetail.intake}}
+      </p> 
+      <a target="_blank" class="btn btn-primary" href="https://www.cut.ac.zw/online_application/" style="color: #fff;background-color: #24b0ed;">Apply | Now</a>
+    
+  
+                  </div>
+            
+             
+          
+        
+             
+                 
                 </div>
+                
               </div>
             </div>
+          
+            
           </div>
-          <!--/ Accordion end -->
         </div>
-        <div class="col-md-6">
-          <h3 class="column-title-small">About Programme</h3>
-
-          <p style="text-align: justify;font-size: 17px;">      {{itemDetail.about}}</p>
-     
-        </div>
-
       
-      </div><!-- Content row end -->
-      <div class="gap-40"></div>
-  
-      <div class="call-to-action classic">
-        <div class="row align-items-center">
-          <div class="col-md-8 text-center text-md-left">
-            <div class="call-to-action-text">
-              <h3 class="action-title">Join Us Today</h3>
-            </div>
-          </div><!-- Col end -->
-          <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
-            <div class="call-to-action-btn">
-              <a target="_blank" class="btn btn-primary" href="https://www.cut.ac.zw/online_application/" style="color: #fff;">Apply | Now</a>
-            </div>
-          </div><!-- col end -->
-        </div><!-- row end -->
-      </div><!-- Action end -->
-    </div><!-- Container end -->
-  </section><!-- Main container end -->
-
+      </div>
+    </div>
+  </section>

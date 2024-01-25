@@ -17,7 +17,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProgramDetailComponent } from './components/program-detail/program-detail.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -43,6 +43,7 @@ import { ProgramDetailComponent } from './components/program-detail/program-deta
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    BrowserAnimationsModule
 
  
    

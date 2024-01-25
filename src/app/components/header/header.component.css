@@ -42,3 +42,24 @@ body {
     50% { background-color: #24b0ed; box-shadow: 0 0 40px #cca531; }
     100% { background-color: #24b0ed; box-shadow: 0 0 3px #cca531; }
   }
+
+  .clipped{
+    display: absolute !important;
+    background-color: white;
+    border-radius: 50%;
+    padding-bottom: 0.4rem;
+    padding-left:0.8rem;
+    box-shadow: 0 20px 16px rgba(10,10,10,.1);
+    padding-right: 1rem;
+    
+ 
+}
+
+.logo-imgg{
+  width: 250px;
+  height: 100px;
+}
+
+.apply-btn{
+  font-size:14px;
+}
